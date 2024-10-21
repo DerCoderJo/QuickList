@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "quicklist",
+  "version": "${version}",
+  "name": "QuickList",
+  "description": "With §mQuickList§r you can search for any item in the Game by pressing [N] (by default)!",
+  "authors": [
+    "DercoderJo"
+  ],
+  "contact": {
+    "discord": "https://discord.gg/jz89NS6uhT"
+  },
+  "license": "GPL-3.0",
+  "icon": "icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.dercoderjo.quicklist.QuickListClient"
+    ],
+    "main": [
+      "dev.dercoderjo.quicklist.QuickList"
+    ],
+
+    "emi": [
+      "dev.dercoderjo.quicklist.QuickListEmiPlugin"
+    ]
+  },
+  "mixins": [
+    "quicklist.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "emi": ">=1.1.16+1.21.1"
+  }
+}
